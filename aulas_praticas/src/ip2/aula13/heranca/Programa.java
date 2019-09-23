@@ -36,7 +36,9 @@ public class Programa {
 		
 		Vendedor v1 = new Vendedor(5, "Joao da Silva", 2000, dataAdmissao, 0.5d);
 		Vendedor v2 = new Vendedor(6, "Ana da Silva", 2500, dataAdmissao, 0.7d);		
-		
+		Vendedor v3 = new Vendedor(7, "Theo", 2500, dataAdmissao, 0.7d);		
+		Vendedor v4 = new Vendedor(8, "Leo", 2500, dataAdmissao, 0.7d);		
+
 		repositorio.inserir(f1);
 		repositorio.inserir(f2);
 		
@@ -45,6 +47,8 @@ public class Programa {
 
 		repositorio.inserir(v1);
 		repositorio.inserir(v2);
+		repositorio.inserir(v3);
+		repositorio.inserir(v4);
 		
 		Funcionario func = repositorio.buscar(5);
 		System.out.println("Funcionario retornado: " + func.getNome());
@@ -57,6 +61,8 @@ public class Programa {
 			Vendedor vendedor = (Vendedor) func;
 			System.out.println("Vendedor retornado! | Comissão: " + vendedor.getPercentualComissao() + "%");	
 		}
+		
+		System.out.println("Total de vendedores: " + repositorio.calcularTotalVendedores());
 	}
 
 }

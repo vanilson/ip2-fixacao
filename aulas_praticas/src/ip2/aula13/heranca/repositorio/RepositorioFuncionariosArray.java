@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import ip2.aula13.heranca.model.Funcionario;
+import ip2.aula13.heranca.model.Vendedor;
 
 public class RepositorioFuncionariosArray {
 	
@@ -63,10 +64,25 @@ public class RepositorioFuncionariosArray {
 	}
 	
 	public double somarTodosOsSalarios() {
+
 		return this.funcionarios.stream()
 				.map(Funcionario::getSalario)
 				.mapToDouble(Double::doubleValue)
 				.sum();
 	}
+	
+	public int calcularTotalVendedores () {
+		
+		int totalVendedores = 0;
+		
+		for (Funcionario funcionario : funcionarios) {
+			if (funcionario instanceof Vendedor) {
+				totalVendedores++;
+			}
+		}
+		
+		return totalVendedores;
+	}
+	
 
 }
