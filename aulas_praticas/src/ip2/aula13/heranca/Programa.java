@@ -33,6 +33,7 @@ public class Programa {
 		
 		Gerente g1 = new Gerente(3, "Jose", 1000, dataAdmissao, "Compras");
 		Gerente g2 = new Gerente(4, "Maria Jose", 2000, dataAdmissao, "Informatica");
+		Gerente g3 = new Gerente(9, "Jose Maria", 2000, dataAdmissao, "Informatica");
 		
 		Vendedor v1 = new Vendedor(5, "Joao da Silva", 2000, dataAdmissao, 0.5d);
 		Vendedor v2 = new Vendedor(6, "Ana da Silva", 2500, dataAdmissao, 0.7d);		
@@ -44,6 +45,7 @@ public class Programa {
 		
 		repositorio.inserir(g1);
 		repositorio.inserir(g2);
+		repositorio.inserir(g3);
 
 		repositorio.inserir(v1);
 		repositorio.inserir(v2);
@@ -51,7 +53,7 @@ public class Programa {
 		repositorio.inserir(v4);
 		
 		Funcionario func = repositorio.buscar(5);
-		System.out.println("Funcionario retornado: " + func.getNome());
+		System.out.println("Funcionario retornado: " + func.getNome()); 
 		
 		if (func instanceof Gerente) {
 			Gerente gerente = (Gerente) func;
@@ -63,6 +65,8 @@ public class Programa {
 		}
 		
 		System.out.println("Total de vendedores: " + repositorio.calcularTotalVendedores());
+		System.out.println("Média salarial dos gerentes: " + repositorio.calcularMediaSalarialGerentes());
+
 	}
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import ip2.aula13.heranca.model.Funcionario;
+import ip2.aula13.heranca.model.Gerente;
 import ip2.aula13.heranca.model.Vendedor;
 
 public class RepositorioFuncionariosArray {
@@ -83,6 +84,23 @@ public class RepositorioFuncionariosArray {
 		
 		return totalVendedores;
 	}
+
+	public double calcularMediaSalarialGerentes() {
+		
+		double totalSalario = 0;
+		int totalGerentes = 0;
+		
+		for (Funcionario funcionario : funcionarios) {
+			
+			if (funcionario instanceof Gerente) {
+				totalSalario += funcionario.getSalario();
+				totalGerentes++;
+			}
+		}
+		
+		return totalGerentes > 0 ? totalSalario / totalGerentes : 0;
+		
+	} 
 	
 
 }
