@@ -9,18 +9,18 @@ public class Programa {
 //		Crie dois estudantes com pelo menos dois cursos e suas respectivas notas de cada curso, e adicione no array
 		Estudante e1 = new Estudante();
 		e1.setNome("João");
-		e1.setCursos(new String[] { "IP2", "Introducao a Computacao" });
+		e1.setCursos(new String[] { "IP2-Turma A", "Desenv. Apps Moveis" });
 
 		Estudante e2 = new Estudante();
 		e2.setNome("Maria");
-		e2.setCursos(new String[] { "IP2", "Metodologia Cientifica" });
+		e2.setCursos(new String[] { "IP2-Turma B", "Desenvolvimento de jogos" });
 
 		pessoas[0] = e1;
 		pessoas[1] = e2;
 
 //		Crie dois professores com pelo menos dois cursos e adicione no array
-		Professor prof1 = new Professor("Jose", "Rua A", new String[] { "IP2", "Desenv. Apps Moveis", "Desenv. aplicacoes Web" });
-		Professor prof2 = new Professor("Cesar", "Rua B", new String[] { "IP2", "Desenvolvimento de jogos" });
+		Professor prof1 = new Professor("Jose", "Rua A", new String[] { "IP2-Turma A", "Desenv. Apps Moveis", "Desenv. aplicacoes Web" });
+		Professor prof2 = new Professor("Cesar", "Rua B", new String[] { "IP2-Turma B", "Desenvolvimento de jogos" });
 
 		pessoas[2] = prof1;
 		pessoas[3] = prof2;
